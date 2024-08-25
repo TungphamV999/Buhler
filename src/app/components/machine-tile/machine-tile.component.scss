@@ -1,0 +1,33 @@
+.machine-tile-container {
+  padding: 0.5rem 1rem;
+  width: 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.warning {
+  color: white;
+  background-color: rgb(230, 139, 20);
+}
+
+.alarm {
+  background-color: rgb(245, 66, 34);
+  color: white;
+}
+
+.running {
+  background-color: lightgray;
+  color: black;
+}
+
+.tile-title {
+  text-align: center;
+}
+
+.process-icon {
+  width: 16%;
+  position: absolute;
+  top: 0rem;
+  right: 0.3rem;
+  color: white;
+}

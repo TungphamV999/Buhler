@@ -1,0 +1,25 @@
+<div
+  class="machine-tile-container"
+  [ngClass]="{
+    warning: machine.state === 'Warning',
+    alarm: machine.state === 'Alarm',
+    running: machine.state === 'Running'
+  }"
+>
+  <div style="padding: 0.3rem">
+    <mat-icon
+      [ngStyle]="{
+        color: ['Warning', 'Alarm'].includes(machine.state) ? 'white' : 'black'
+      }"
+      [svgIcon]="machineIcon"
+    ></mat-icon>
+    <span class="tile-title">{{ machine.name }}</span>
+  </div>
+  <mat-icon
+    class="process-icon"
+    [ngStyle]="{
+      color: ['Warning', 'Alarm'].includes(machine.state) ? 'white' : '#86af49'
+    }"
+    [svgIcon]="statusIcon"
+  ></mat-icon>
+</div>
