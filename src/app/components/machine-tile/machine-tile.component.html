@@ -7,19 +7,22 @@
   }"
 >
   <div style="padding: 0.3rem">
+    @if(machine.machineIcon){
     <mat-icon
       [ngStyle]="{
         color: ['Warning', 'Alarm'].includes(machine.state) ? 'white' : 'black'
       }"
-      [svgIcon]="machineIcon"
+      [svgIcon]="machine.machineIcon"
     ></mat-icon>
+    }
     <span class="tile-title">{{ machine.name }}</span>
   </div>
+
   <mat-icon
     class="process-icon"
     [ngStyle]="{
       color: ['Warning', 'Alarm'].includes(machine.state) ? 'white' : '#86af49'
     }"
-    [svgIcon]="statusIcon"
+    [svgIcon]="machine.statusIcon"
   ></mat-icon>
 </div>

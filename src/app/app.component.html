@@ -1,7 +1,12 @@
 <app-header />
-<app-navigation [machines]="machines" />
-<div style="margin-top: 8rem">
-  <app-machines-overview [machines]="machines" />
+
+@if(machines){
+<div>
+  <app-navigation [machines]="machines" />
+  <div style="margin-top: 8rem">
+    <app-machines-overview [machines]="machines" />
+  </div>
 </div>
+}
 
 <router-outlet />

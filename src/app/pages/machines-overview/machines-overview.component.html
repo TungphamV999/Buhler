@@ -1,7 +1,7 @@
 <div style="display: flex; align-items: center">
-  @for (machine of machines; track $index) {
+  @for (machine of machinesVW; track $index) {
   <app-machine-tile [machine]="machine" />
-  @if($index !== machines.length -1){
+  @if($index !== machinesVW.length -1){
   <div class="join-line"></div>
   } }
 </div>

@@ -6,6 +6,8 @@ export interface Machine {
 export interface MachineVM {
   name: string;
   state: MachineState;
+  statusIcon: string;
+  machineIcon?: string;
 }
 
 export type MachineState = 'Running' | 'Alarm' | 'Warning';

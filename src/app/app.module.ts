@@ -7,7 +7,6 @@ import { NavigationComponent } from './pages/navigation/navigation.component';
 import { MachinesOverviewComponent } from './pages/machines-overview/machines-overview.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './pages/header/header.component';
-import { NavigationTileComponent } from './components/navigation-tile/navigation-tile.component';
 import { MatIconModule } from '@angular/material/icon';
 import { APP_INITIALIZER, FactoryProvider, inject } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
@@ -43,7 +42,6 @@ export function provideOgdIcons(): FactoryProvider {
     NavigationComponent,
     MachinesOverviewComponent,
     HeaderComponent,
-    NavigationTileComponent,
     MachineTileComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, MatIconModule],

@@ -10,10 +10,13 @@ import { Machine } from './models/machine.model';
 })
 export class AppComponent implements OnInit {
   machines!: Machine[];
-
   constructor(private productionLineService: ProductionLineBaggingService) {}
 
   ngOnInit(): void {
+    this.getMachinesData();
+  }
+
+  private getMachinesData(): void {
     this.productionLineService
       .getProductionLineData()
       .pipe(take(1))
